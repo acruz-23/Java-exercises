@@ -1,8 +1,8 @@
 package com.pluralsight.mod2;
 
 public class CellPhone {
-        private Integer serialNumber;
-        private String model, carrier, phoneNumber, owner;
+        private Integer serialNumber = 000000000;
+        private String model = "unknown", carrier ="unknown", phoneNumber = "unknown", owner = "unknown";
 
         public CellPhone(Integer serialNumber, String model, String carrier, String phoneNumber, String owner){
             this.serialNumber = serialNumber;
@@ -11,7 +11,12 @@ public class CellPhone {
             this.phoneNumber = phoneNumber.trim();
             this.owner = owner.trim();
         }
-        public Integer getSerialNumber(){
+
+    public CellPhone() {
+
+    }
+
+    public Integer getSerialNumber(){
             return this.serialNumber;
         }
 
@@ -43,6 +48,13 @@ public class CellPhone {
         public String getOwner(){
             return this.owner;
         }
+        public String dial(String phoneNumber){
+            return this.owner + " is calling " + phoneNumber;
+        }
 
+
+        public void setOwner(String owner) {
+                this.owner = owner;
+        }
 
 }
